@@ -1,0 +1,33 @@
+﻿Descripció 
+	UC2. Veure detall de la sèrie
+	Actors
+	Client
+	Precondicions
+	Haver clicat en una sèrie del catàleg de sèries
+	Flux bàsic
+	1. L’usuari clica sobre una sèrie del catàleg.
+2. El sistema li mostra a l’usuari una breu descripció, el director de la sèrie, els actors i la productora. Es mostra el nombre de temporades i el número d’episodis de cada temporada. El nom dels episodis, la temporada, el número de cada episodi, la seva duració, l’idioma original, i la data a la que es va emetre per primera vegada.
+3. L’usuari surt de la sèrie
+4. El sistema torna al catàleg de sèries
+	Flux alternatiu
+	      2.a. Si l’usuari està logat tindrà l’opció de veure la sèrie
+	Postcondicions
+	Cap
+	
+
+
+
+Descripció
+	UC3. Veure catàleg de series
+	Actors
+	Client
+	Precondicions
+	Cap
+	Flux bàsic
+	1. L’usuari entra a l’aplicació
+2. El sistema li mostra les diferents sèries amb el títol, el nombre de temporades i el nombre d’episodis per temporada
+3. L’usuari surt de l’aplicació
+	Flux alternatiu
+	      2.a. L’usuari clica sobre una sèrie. Veure detalls sèrie (UC2)
+	Postcondicions
+	Cap
