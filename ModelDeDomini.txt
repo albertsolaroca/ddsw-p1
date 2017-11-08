@@ -1,0 +1,51 @@
+@startuml
+Totseries "1"-- "1" CatàlegDeSèries : té
+CatàlegDeSèries "1" *-down- "1..*" Sèrie : té
+Sèrie "1" *-- "1..*" Temporades : té
+Temporades "1" *-- "1..*" Episodi : té
+Totseries "1" -right- "*" Client: té
+Client "1" -- "1" EstatClient: té
+EstatClient <|-- Registrat
+EstatClient <|-- NoRegistrat
+Registrat <|-- Logat
+Client "1" -- "1" CatàlegDeSèries: veu
+Logat "1" -- "1" CanalDeStreaming: fa servir
+Logat "1" -- "1" EpisodiVist: valora
+CanalDeStreaming "1" -- "1" Episodi : permet veure
+Sèrie "1" -left- "1" Director : té
+Sèrie "1" -left- "1..*" Actor : té
+Sèrie "1" -right- "1" Productora : té
+Sèrie "1" -- "1" DescripcióSèrie: té
+Artistes <|-down- Director
+Artistes <|-down- Actor
+Episodi "1"--"1" DescripcióEpisodi: té 
+Episodi "1" -- "1" EstatEpisodi: té 
+EstatEpisodi <|-- Reproduint
+EstatEpisodi <|-- EpisodiNoVist
+EstatEpisodi <|-- EpisodiVist
+EpisodiVist <|-- EpisodiValorat
+
+Temporades : numero
+Class Episodi{
+ nom
+ duració
+ idioma original
+ data de primera emisió
+} 
+Class Productora{
+  nom
+  identificador
+  any de creació
+}
+Class Artistes{
+  nom
+  nacionalitat
+}
+Class Registrat{
+ usuari
+ password
+ nom
+ nacionalitat
+ data de naixament
+}
+@enduml
